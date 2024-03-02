@@ -1,6 +1,7 @@
 name = "rubiko"
 main = "src/index.ts"
 compatibility_date = "2024-02-23"
+minify = true
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
