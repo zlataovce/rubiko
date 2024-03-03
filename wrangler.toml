@@ -6,8 +6,8 @@ minify = true
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
 # Docs: https://developers.cloudflare.com/workers/platform/environment-variables
-# [vars]
-# MY_VARIABLE = "production_value"
+[vars]
+NEKOS_API_URL = "https://nekos.best/api/v2"
 
 # Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
 # Docs: https://developers.cloudflare.com/workers/runtime-apis/kv

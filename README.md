@@ -10,6 +10,7 @@ Run `yarn install` to download all needed dependencies, then `yarn wrangler logi
 
 At last, run `yarn wrangler deploy` to deploy rubiko to a Worker.
 You'll need to create these secrets for the bot, you can get them from the [Discord Developer Portal](https://discord.com/developers/applications):
+
 ```bash
 yarn wrangler secret put DISCORD_TOKEN
 yarn wrangler secret put DISCORD_PUBLIC_KEY

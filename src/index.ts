@@ -19,6 +19,10 @@ export interface Env {
     // Example binding to a Queue. Learn more at https://developers.cloudflare.com/queues/javascript-apis/
     // MY_QUEUE: Queue;
 
+    NEKOS_API_URL: string;
+
+    // secrets
+
     DISCORD_TOKEN: string;
     DISCORD_PUBLIC_KEY: string;
     DISCORD_APPLICATION_ID: string;
@@ -58,7 +62,7 @@ const router = Router()
                     return error(400, "Unknown command");
                 }
 
-                return json(handler(interaction));
+                return json(await handler(interaction, env));
             }
         }
 

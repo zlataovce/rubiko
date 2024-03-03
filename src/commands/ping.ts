@@ -1,7 +1,8 @@
+import type { Env } from "../";
 import type { Command } from "./";
 import {
     type APIInteractionResponse,
-    type APIInteraction,
+    type APIApplicationCommandInteraction,
     InteractionResponseType,
     MessageFlags,
 } from "discord-api-types/payloads/v10";
@@ -9,7 +10,7 @@ import {
 const ping: Command = {
     name: "ping",
     description: "Sends a ping interaction.",
-    handler: (_interaction: APIInteraction): APIInteractionResponse => {
+    handler: async (_interaction: APIApplicationCommandInteraction, _env: Env): Promise<APIInteractionResponse> => {
         return {
             type: InteractionResponseType.ChannelMessageWithSource,
             data: {
