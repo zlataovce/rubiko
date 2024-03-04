@@ -1,5 +1,6 @@
-import type { Env } from "../../";
-import type { Command } from "../";
+import type { Env } from "@/env";
+import type { Command } from "@/commands";
+import { COLORS } from "@/util";
 import {
     type APIInteractionResponse,
     type APIApplicationCommandInteraction,
@@ -60,15 +61,14 @@ export const createAction = (action: Action): Command => {
             try {
                 const resp = (await fetch(url).then((r) => r.json())) as NekosResponse;
 
-                let message = action.messages.normal
-                    .replace("%invoker%", `<@${invoker.id}>`)
-                    .replace("%user%", `<@${user.value}>`);
-
+                let message = action.messages.normal;
                 if (user.value === invoker.id) {
                     message = action.messages.lonely;
                 } else if (user.value === interaction.application_id) {
                     message = action.messages.self;
                 }
+
+                message = message.replace("%invoker%", `<@${invoker.id}>`).replace("%user%", `<@${user.value}>`);
 
                 return {
                     type: InteractionResponseType.ChannelMessageWithSource,
@@ -76,7 +76,7 @@ export const createAction = (action: Action): Command => {
                         content: `:speech_balloon: ${message}`,
                         embeds: [
                             {
-                                color: 16776960, // yellow
+                                color: COLORS[Math.floor(Math.random() * COLORS.length)], // random color
                                 image: {
                                     url: resp.results[0].url,
                                 },

@@ -1,5 +1,5 @@
-import type { Env } from "../";
 import type { Command } from "./";
+import type { Env } from "@/env";
 import {
     type APIInteractionResponse,
     type APIApplicationCommandInteraction,

@@ -5,7 +5,7 @@ const pat = createAction({
     description: "Pats someone.",
     category: "pat",
     messages: {
-        normal: "%user% you have been patted by %invoker%",
+        normal: "%user%, you have been patted by %invoker%",
         lonely: "Aww, I see you are lonely, take a pat <3",
         self: "*is patted*",
     },

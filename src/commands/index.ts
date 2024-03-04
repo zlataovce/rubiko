@@ -1,4 +1,4 @@
-import type { Env } from "../";
+import type { Env } from "@/env";
 import type {
     APIApplicationCommand,
     APIApplicationCommandInteraction,
@@ -9,6 +9,9 @@ import pat from "./action/pat";
 import hug from "./action/hug";
 import kiss from "./action/kiss";
 import poke from "./action/poke";
+import slap from "./action/slap";
+import bite from "./action/bite";
+import tickle from "./action/tickle";
 
 export type CommandHandler = (
     interaction: APIApplicationCommandInteraction,
@@ -27,6 +30,9 @@ export const COMMANDS: Command[] = [
     hug,
     kiss,
     poke,
+    slap,
+    bite,
+    tickle,
 ];
 
 const commands = new Map(COMMANDS.map((cmd) => [cmd.name!.toLowerCase(), cmd]));

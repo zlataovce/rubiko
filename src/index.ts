@@ -1,32 +1,8 @@
 import { Router, IRequest, json, error } from "itty-router";
 import { verifyKey } from "discord-interactions";
-import { COMMANDS, findHandler } from "./commands";
 import { type APIInteraction, InteractionType, InteractionResponseType } from "discord-api-types/payloads/v10";
-
-export interface Env {
-    // Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
-    // MY_KV_NAMESPACE: KVNamespace;
-    //
-    // Example binding to Durable Object. Learn more at https://developers.cloudflare.com/workers/runtime-apis/durable-objects/
-    // MY_DURABLE_OBJECT: DurableObjectNamespace;
-    //
-    // Example binding to R2. Learn more at https://developers.cloudflare.com/workers/runtime-apis/r2/
-    // MY_BUCKET: R2Bucket;
-    //
-    // Example binding to a Service. Learn more at https://developers.cloudflare.com/workers/runtime-apis/service-bindings/
-    // MY_SERVICE: Fetcher;
-    //
-    // Example binding to a Queue. Learn more at https://developers.cloudflare.com/queues/javascript-apis/
-    // MY_QUEUE: Queue;
-
-    NEKOS_API_URL: string;
-
-    // secrets
-
-    DISCORD_TOKEN: string;
-    DISCORD_PUBLIC_KEY: string;
-    DISCORD_APPLICATION_ID: string;
-}
+import { COMMANDS, findHandler } from "./commands";
+import type { Env } from "./env";
 
 const readInteraction = async (request: Request, env: Env): Promise<APIInteraction | null> => {
     const signature = request.headers.get("X-Signature-Ed25519");
