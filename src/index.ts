@@ -1,5 +1,5 @@
 import { Router, IRequest, json, error } from "itty-router";
-import { verifyKey } from "discord-interactions";
+import { verifyAsync, etc } from "@noble/ed25519";
 import { type APIInteraction, InteractionType, InteractionResponseType } from "discord-api-types/payloads/v10";
 import { COMMANDS, findHandler } from "./commands";
 import type { Env } from "./env";
@@ -11,11 +11,16 @@ const readInteraction = async (request: Request, env: Env): Promise<APIInteracti
     if (!timestamp) return null;
 
     const body = await request.text();
-    if (!verifyKey(body, signature, timestamp, env.DISCORD_PUBLIC_KEY)) {
+    if (!(await verifySignature(body, signature, timestamp, env.DISCORD_PUBLIC_KEY))) {
         return null;
     }
 
     return JSON.parse(body);
+};
+
+const enc = new TextEncoder();
+const verifySignature = async (body: string, sig: string, ts: string, pk: string): Promise<boolean> => {
+    return verifyAsync(etc.hexToBytes(sig), etc.concatBytes(enc.encode(ts), enc.encode(body)), etc.hexToBytes(pk));
 };
 
 const router = Router()

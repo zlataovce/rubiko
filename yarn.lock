@@ -285,6 +285,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@noble/ed25519@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@noble/ed25519@npm:2.0.0"
+  checksum: 10c0/877f5c278f93f302f616651efb6dc2c96d3d725eaee00d2b2ebf42414bed448e2dcb20dd566f8926787655d667ab02b9bf1aabb60a5795125169a600d2f5743e
+  languageName: node
+  linkType: hard
+
 "@npmcli/agent@npm:^2.0.0":
   version: 2.2.1
   resolution: "@npmcli/agent@npm:2.2.1"
@@ -582,15 +589,6 @@ __metadata:
   version: 0.37.71
   resolution: "discord-api-types@npm:0.37.71"
   checksum: 10c0/a0dfd30acdc31bfd6c449d13b8f83651fcddcd48592da78be4a7fc96a8c9533a4cc728b72e4f7950fbfc0a233f51531735a65cc2335c62a768f1711e44eb6602
-  languageName: node
-  linkType: hard
-
-"discord-interactions@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "discord-interactions@npm:3.4.0"
-  dependencies:
-    tweetnacl: "npm:^1.0.3"
-  checksum: 10c0/e88fb69b77f8042726a3d9b152809a2f2fc9e38a324cc20bef82b65c143aa7403ace5aef66d267a64d6d29bc97c257bb226cce2dad147b053d99a528be33618c
   languageName: node
   linkType: hard
 
@@ -1436,8 +1434,8 @@ __metadata:
   resolution: "rubiko@workspace:."
   dependencies:
     "@cloudflare/workers-types": "npm:^4.20240222.0"
+    "@noble/ed25519": "npm:^2.0.0"
     discord-api-types: "npm:^0.37.71"
-    discord-interactions: "npm:^3.4.0"
     itty-router: "npm:^4.0.27"
     prettier: "npm:3.2.5"
     typescript: "npm:^5.0.4"
@@ -1645,13 +1643,6 @@ __metadata:
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 10c0/e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
-  languageName: node
-  linkType: hard
-
-"tweetnacl@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "tweetnacl@npm:1.0.3"
-  checksum: 10c0/069d9df51e8ad4a89fbe6f9806c68e06c65be3c7d42f0701cc43dba5f0d6064686b238bbff206c5addef8854e3ce00c643bff59432ea2f2c639feab0ee1a93f9
   languageName: node
   linkType: hard
 

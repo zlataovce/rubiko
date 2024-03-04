@@ -1,6 +1,6 @@
 import type { Env } from "@/env";
 import type { Command } from "@/commands";
-import { COLORS } from "@/util";
+import { randomColor } from "@/util";
 import {
     type APIInteractionResponse,
     type APIApplicationCommandInteraction,
@@ -76,7 +76,7 @@ export const createAction = (action: Action): Command => {
                         content: `:speech_balloon: ${message}`,
                         embeds: [
                             {
-                                color: COLORS[Math.floor(Math.random() * COLORS.length)], // random color
+                                color: randomColor(),
                                 image: {
                                     url: resp.results[0].url,
                                 },
