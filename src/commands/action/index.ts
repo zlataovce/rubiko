@@ -11,18 +11,51 @@ import {
     MessageFlags,
 } from "discord-api-types/payloads/v10";
 
-export interface Action {
-    name: string;
-    description: string;
-    category: string;
-    messages: ActionMessages;
-}
-
-export interface ActionMessages {
-    normal: string;
-    lonely: string;
-    self: string;
-}
+export type NekosCategory =
+    | "baka"
+    | "bite"
+    | "blush"
+    | "bored"
+    | "cry"
+    | "cuddle"
+    | "dance"
+    | "facepalm"
+    | "feed"
+    | "handhold"
+    | "handshake"
+    | "happy"
+    | "highfive"
+    | "hug"
+    | "husbando"
+    | "kick"
+    | "kiss"
+    | "kitsune"
+    | "laugh"
+    | "lurk"
+    | "neko"
+    | "nod"
+    | "nom"
+    | "nope"
+    | "pat"
+    | "peck"
+    | "poke"
+    | "pout"
+    | "punch"
+    | "shoot"
+    | "shrug"
+    | "slap"
+    | "sleep"
+    | "smile"
+    | "smug"
+    | "stare"
+    | "think"
+    | "thumbsup"
+    | "tickle"
+    | "waifu"
+    | "wave"
+    | "wink"
+    | "yawn"
+    | "yeet";
 
 interface NekosResult {
     artist_href: string;
@@ -33,6 +66,25 @@ interface NekosResult {
 
 interface NekosResponse {
     results: NekosResult[];
+}
+
+const fetchNekos = async (baseUrl: string, category: NekosCategory, amount: number = 1): Promise<NekosResponse> => {
+    const url = `${baseUrl}/${category}` + (amount > 1 ? `?amount=${amount}` : "");
+
+    return fetch(url).then((r) => r.json());
+};
+
+export interface Action {
+    name: string;
+    description: string;
+    category?: NekosCategory;
+    messages: ActionMessages;
+}
+
+export interface ActionMessages {
+    normal: string;
+    lonely: string;
+    self: string;
 }
 
 // based on Mantaro's interactions <3
@@ -50,8 +102,6 @@ export const createAction = (action: Action): Command => {
             },
         ],
         handler: async (interaction: APIApplicationCommandInteraction, env: Env): Promise<APIInteractionResponse> => {
-            const url = `${env.NEKOS_API_URL}/${action.category}`;
-
             let invoker = interaction.user;
             if (!invoker) {
                 invoker = interaction.member!.user;
@@ -59,7 +109,7 @@ export const createAction = (action: Action): Command => {
 
             const user = (interaction as APIChatInputInteraction).data.options![0] as APICommandInteractionUserOption;
             try {
-                const resp = (await fetch(url).then((r) => r.json())) as NekosResponse;
+                const nekos = await fetchNekos(env.NEKOS_API_URL, action.category || (action.name as NekosCategory));
 
                 let message = action.messages.normal;
                 if (user.value === invoker.id) {
@@ -78,7 +128,7 @@ export const createAction = (action: Action): Command => {
                             {
                                 color: randomColor(),
                                 image: {
-                                    url: resp.results[0].url,
+                                    url: nekos.results[0].url,
                                 },
                             },
                         ],
