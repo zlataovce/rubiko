@@ -10,7 +10,7 @@
         "format": "prettier . --write"
     },
     "devDependencies": {
-        "@cloudflare/workers-types": "^4.20240312.0",
+        "@cloudflare/workers-types": "^4.20240314.0",
         "prettier": "3.2.5",
         "typescript": "^5.4.2",
         "wrangler": "^3.34.1"
