@@ -1439,7 +1439,7 @@ __metadata:
     itty-router: "npm:^4.2.1"
     prettier: "npm:3.2.5"
     typescript: "npm:^5.4.2"
-    wrangler: "npm:^3.34.1"
+    wrangler: "npm:^3.34.2"
   languageName: unknown
   linkType: soft
 
@@ -1748,9 +1748,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:^3.34.1":
-  version: 3.34.1
-  resolution: "wrangler@npm:3.34.1"
+"wrangler@npm:^3.34.2":
+  version: 3.34.2
+  resolution: "wrangler@npm:3.34.2"
   dependencies:
     "@cloudflare/kv-asset-handler": "npm:0.3.1"
     "@esbuild-plugins/node-globals-polyfill": "npm:^0.2.3"
@@ -1778,7 +1778,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 10c0/6a9cbe2f9b9682812a1664208e114cb6ebb85e58a4162e340dd059c0d0ad61834576998457546f422f22b24921ae2d91e1c9efcf5401e28218369f39ec454eb4
+  checksum: 10c0/01906114a83d296b8d0c334cc9921393338cb8fecf884d10796924fb48f0f1502bd9b51eda6e791f281d81911471fc2912105202a182dab04b032885af4cc73b
   languageName: node
   linkType: hard
 
