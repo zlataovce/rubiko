@@ -285,10 +285,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noble/ed25519@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@noble/ed25519@npm:2.0.0"
-  checksum: 10c0/877f5c278f93f302f616651efb6dc2c96d3d725eaee00d2b2ebf42414bed448e2dcb20dd566f8926787655d667ab02b9bf1aabb60a5795125169a600d2f5743e
+"@noble/ed25519@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@noble/ed25519@npm:2.1.0"
+  checksum: 10c0/6690e48f2ad1a080e56028cf3815e64c6858dc07c0f044dd5bbaec9af90a6ecb1e7256ec22463c5d00de54bd86bf7e7d0fc6a408dd55c871e6d176d44f39c17b
   languageName: node
   linkType: hard
 
@@ -1434,7 +1434,7 @@ __metadata:
   resolution: "rubiko@workspace:."
   dependencies:
     "@cloudflare/workers-types": "npm:^4.20240320.1"
-    "@noble/ed25519": "npm:^2.0.0"
+    "@noble/ed25519": "npm:^2.1.0"
     discord-api-types: "npm:^0.37.74"
     itty-router: "npm:^4.2.2"
     prettier: "npm:3.2.5"

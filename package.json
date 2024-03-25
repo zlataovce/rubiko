@@ -16,7 +16,7 @@
         "wrangler": "^3.37.0"
     },
     "dependencies": {
-        "@noble/ed25519": "^2.0.0",
+        "@noble/ed25519": "^2.1.0",
         "discord-api-types": "^0.37.74",
         "itty-router": "^4.2.2"
     },
