@@ -49,10 +49,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20240320.1":
-  version: 4.20240320.1
-  resolution: "@cloudflare/workers-types@npm:4.20240320.1"
-  checksum: 10c0/9060bb8abb28d4f9e7e96a01485f181184a8ea77c75b9bf0fcec90498d19b6ea3f7c80fd80378de9fd8a89b266af32e865aa436c7cabd4a48dedaed664f4e807
+"@cloudflare/workers-types@npm:^4.20240329.0":
+  version: 4.20240329.0
+  resolution: "@cloudflare/workers-types@npm:4.20240329.0"
+  checksum: 10c0/9c3015b2d1f957ae2130c14d34fcca97efcb8dc61e5d6332497982502ffbf45930947c8474a7e153d06e08ac35ef7a03b94db1b440e1cf4c3216e25b1c0f02e8
   languageName: node
   linkType: hard
 
@@ -585,10 +585,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:^0.37.76":
-  version: 0.37.76
-  resolution: "discord-api-types@npm:0.37.76"
-  checksum: 10c0/42dc28d58343aa98ff47d49b2bddb607a5c84d5d43c1f5cce33a314b2cde1581dadd52d0c61875c31bcd3b2df40fcc16bf524ab08ee95b9d661d5729e55f9752
+"discord-api-types@npm:^0.37.77":
+  version: 0.37.77
+  resolution: "discord-api-types@npm:0.37.77"
+  checksum: 10c0/8903e12bfaa9b25b9ee3bd2016b9872123e98e5605625a53dece10d1a8b76fa5f92a5cf92282d39d702b391f27f434eed9a532c3a9f83885d78193db39f09b90
   languageName: node
   linkType: hard
 
@@ -990,10 +990,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"itty-router@npm:^4.2.2":
-  version: 4.2.2
-  resolution: "itty-router@npm:4.2.2"
-  checksum: 10c0/0ead9d59b1b21c9a8342654f3c25827dcd31cb0573c7a3308e1e87278c59e821312ba1ab377c0d323360b955f6945960bd4d04f4763ff8ff63a5ef07aa2a1888
+"itty-router@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "itty-router@npm:5.0.4"
+  checksum: 10c0/5734daf4ee20e3ca8ce2d3fa2e7619ba03c1fc4547acb9393711052329ff7c5bbe1ff4996c980fc5150b8e4de1c52f151a29c77153675302899e07434a0be438
   languageName: node
   linkType: hard
 
@@ -1070,9 +1070,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"miniflare@npm:3.20240320.0":
-  version: 3.20240320.0
-  resolution: "miniflare@npm:3.20240320.0"
+"miniflare@npm:3.20240320.1":
+  version: 3.20240320.1
+  resolution: "miniflare@npm:3.20240320.1"
   dependencies:
     "@cspotcode/source-map-support": "npm:0.8.1"
     acorn: "npm:^8.8.0"
@@ -1088,7 +1088,7 @@ __metadata:
     zod: "npm:^3.20.6"
   bin:
     miniflare: bootstrap.js
-  checksum: 10c0/9b863a1edb23a7843c2bd8c571fad9df5682c74db82e2cae31101311362f0cb75d281d55827e1beecfe7d9c09284f95f72e66b5af87d972f226481f3350cd469
+  checksum: 10c0/a9b32730bca2add94c060e6f514fdebc0437ef8da9b044a1408c4a7dcccfec6932a456d55f04af589ba51f5a58b056999c47670f7792ff59b4b55d81c46af859
   languageName: node
   linkType: hard
 
@@ -1433,13 +1433,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rubiko@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^4.20240320.1"
+    "@cloudflare/workers-types": "npm:^4.20240329.0"
     "@noble/ed25519": "npm:^2.1.0"
-    discord-api-types: "npm:^0.37.76"
-    itty-router: "npm:^4.2.2"
+    discord-api-types: "npm:^0.37.77"
+    itty-router: "npm:^5.0.4"
     prettier: "npm:3.2.5"
     typescript: "npm:^5.4.3"
-    wrangler: "npm:^3.37.0"
+    wrangler: "npm:^3.41.0"
   languageName: unknown
   linkType: soft
 
@@ -1748,9 +1748,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:^3.37.0":
-  version: 3.37.0
-  resolution: "wrangler@npm:3.37.0"
+"wrangler@npm:^3.41.0":
+  version: 3.41.0
+  resolution: "wrangler@npm:3.41.0"
   dependencies:
     "@cloudflare/kv-asset-handler": "npm:0.3.1"
     "@esbuild-plugins/node-globals-polyfill": "npm:^0.2.3"
@@ -1759,7 +1759,7 @@ __metadata:
     chokidar: "npm:^3.5.3"
     esbuild: "npm:0.17.19"
     fsevents: "npm:~2.3.2"
-    miniflare: "npm:3.20240320.0"
+    miniflare: "npm:3.20240320.1"
     nanoid: "npm:^3.3.3"
     path-to-regexp: "npm:^6.2.0"
     resolve: "npm:^1.22.8"
@@ -1778,7 +1778,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 10c0/4f811b3e84e6a845209fde127c315c37151640aa4b557244d62f2d5e3bb591819f45e0dbc1dd60847947e384b7708e4d725b5cd5ea1d84a03956fa3cb7d58f4f
+  checksum: 10c0/2c94d062a88f8bb52b0ff0140ed814c58bf516abac4528a8ce31dd7443c9badc383d89f056840a83b9a826a739cfbbd711a8453dbcbfdbb19cb6081091d66fc7
   languageName: node
   linkType: hard
 

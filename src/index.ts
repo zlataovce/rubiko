@@ -1,4 +1,4 @@
-import { Router, IRequest, json, error } from "itty-router";
+import { Router, json, error, type IRequest } from "itty-router";
 import { verifyAsync, etc } from "@noble/ed25519";
 import { type APIInteraction, InteractionType, InteractionResponseType } from "discord-api-types/payloads/v10";
 import { COMMANDS, findHandler } from "./commands";
@@ -23,7 +23,7 @@ const verifySignature = async (body: string, sig: string, ts: string, pk: string
     return verifyAsync(etc.hexToBytes(sig), etc.concatBytes(enc.encode(ts), enc.encode(body)), etc.hexToBytes(pk));
 };
 
-const router = Router()
+const router = Router({ catch: error })
     .get("/", (_request: IRequest, env: Env, _ctx: ExecutionContext): Response => {
         return json({ status: 200, id: env.DISCORD_APPLICATION_ID });
     })
@@ -67,10 +67,7 @@ const router = Router()
         }
 
         return json({ status: 200, data: await resp.json() });
-    });
+    })
+    .all("*", () => error(404));
 
-export default {
-    async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-        return router.handle(request, env, ctx).catch(error);
-    },
-};
+export default router;
