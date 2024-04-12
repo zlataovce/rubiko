@@ -585,10 +585,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:^0.37.77":
-  version: 0.37.77
-  resolution: "discord-api-types@npm:0.37.77"
-  checksum: 10c0/8903e12bfaa9b25b9ee3bd2016b9872123e98e5605625a53dece10d1a8b76fa5f92a5cf92282d39d702b391f27f434eed9a532c3a9f83885d78193db39f09b90
+"discord-api-types@npm:^0.37.79":
+  version: 0.37.79
+  resolution: "discord-api-types@npm:0.37.79"
+  checksum: 10c0/1f8d9d7ee76c06faab213a1a0c9ca4f252f8cc3b959f8338416e793c32fec8676c6ef451fd5b73d19fbd0783d08b901b533b178b3564e89170c0ed38dfdce440
   languageName: node
   linkType: hard
 
@@ -1435,7 +1435,7 @@ __metadata:
   dependencies:
     "@cloudflare/workers-types": "npm:^4.20240329.0"
     "@noble/ed25519": "npm:^2.1.0"
-    discord-api-types: "npm:^0.37.77"
+    discord-api-types: "npm:^0.37.79"
     itty-router: "npm:^5.0.9"
     prettier: "npm:3.2.5"
     typescript: "npm:^5.4.3"
