@@ -1041,10 +1041,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"itty-router@npm:^5.0.15":
-  version: 5.0.15
-  resolution: "itty-router@npm:5.0.15"
-  checksum: 10c0/d4a20e3e01a5482abf1d52f9dcf9bbab06b09aa2d06db513362d3656f0c229b1acd2208d88f1d4fed59d04f00c58f1ec4a263eec9180f10fe64238c89cea0bd2
+"itty-router@npm:^5.0.16":
+  version: 5.0.16
+  resolution: "itty-router@npm:5.0.16"
+  checksum: 10c0/608bab1c80210f1d7391ddf9660248dd512b9b11dcb004b3e2b5a98a5da27711eafa9957455b4403438255834ad29684551cad9d01b1d8959ffb5f9a352fb4b8
   languageName: node
   linkType: hard
 
@@ -1514,7 +1514,7 @@ __metadata:
     "@cloudflare/workers-types": "npm:^4.20240405.0"
     "@noble/ed25519": "npm:^2.1.0"
     discord-api-types: "npm:^0.37.79"
-    itty-router: "npm:^5.0.15"
+    itty-router: "npm:^5.0.16"
     prettier: "npm:3.2.5"
     typescript: "npm:^5.4.5"
     wrangler: "npm:^3.50.0"
