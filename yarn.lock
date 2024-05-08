@@ -49,10 +49,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20240405.0":
-  version: 4.20240405.0
-  resolution: "@cloudflare/workers-types@npm:4.20240405.0"
-  checksum: 10c0/887961d47c9d8f62b99fb9c6987d6d9c5b7c463f2dcc0d134565fddea76444674f07860c7fb18657365fc814f1794210ecead13e897ec4f21cca26cffeb8d0b5
+"@cloudflare/workers-types@npm:^4.20240502.0":
+  version: 4.20240502.0
+  resolution: "@cloudflare/workers-types@npm:4.20240502.0"
+  checksum: 10c0/b4104979faa6a8a2a8766a65c646cf7297f2b55b535676d358b934e8d76922e86766e4fb3900cdde2bb8011779ba0897a7f54b5d2df3c8868e2c3d32b397cdaf
   languageName: node
   linkType: hard
 
@@ -1511,7 +1511,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rubiko@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^4.20240405.0"
+    "@cloudflare/workers-types": "npm:^4.20240502.0"
     "@noble/ed25519": "npm:^2.1.0"
     discord-api-types: "npm:^0.37.83"
     itty-router: "npm:^5.0.15"
