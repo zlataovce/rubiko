@@ -20,5 +20,5 @@
         "discord-api-types": "^0.37.83",
         "itty-router": "^5.0.17"
     },
-    "packageManager": "yarn@4.1.1"
+    "packageManager": "yarn@4.2.2"
 }
