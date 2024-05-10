@@ -1,4 +1,4 @@
-# rubiko
+# rubiko [![Invite](https://img.shields.io/badge/discord-invite-blue)](https://discord.com/oauth2/authorize?client_id=1213159235513352213&permissions=2147485696&scope=bot+applications.commands)
 
 A small, server-less Discord bot for roleplaying and utility commands, designed to run on [Cloudflare Workers](https://workers.cloudflare.com/).
 
