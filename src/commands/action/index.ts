@@ -2,11 +2,13 @@ import type { Env } from "@/env";
 import type { Command } from "@/commands";
 import { randomColor } from "@/util";
 import {
-    type APIInteractionResponse,
     type APIApplicationCommandInteraction,
-    type APIChatInputApplicationCommandInteraction as APIChatInputInteraction,
     type APIApplicationCommandInteractionDataUserOption as APICommandInteractionUserOption,
+    type APIChatInputApplicationCommandInteraction as APIChatInputInteraction,
+    type APIInteractionResponse,
     ApplicationCommandOptionType,
+    ApplicationIntegrationType,
+    InteractionContextType,
     InteractionResponseType,
     MessageFlags,
 } from "discord-api-types/payloads/v10";
@@ -101,6 +103,8 @@ export const createAction = (action: Action): Command => {
                 required: true,
             },
         ],
+        integration_types: [ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall],
+        contexts: [InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel],
         handler: async (interaction: APIApplicationCommandInteraction, env: Env): Promise<APIInteractionResponse> => {
             let invoker = interaction.user;
             if (!invoker) {
