@@ -60,9 +60,10 @@ export type NekosCategory =
     | "yeet";
 
 interface NekosResult {
-    artist_href: string;
-    artist_name: string;
-    source_url: string;
+    artist_href?: string;
+    artist_name?: string;
+    source_url?: string;
+    anime_name?: string;
     url: string;
 }
 
@@ -124,15 +125,22 @@ export const createAction = (action: Action): Command => {
 
                 message = message.replace("%invoker%", `<@${invoker.id}>`).replace("%user%", `<@${user.value}>`);
 
+                let content = `:speech_balloon: ${message}`;
+
+                const result = nekos.results[0];
+                if (result.anime_name) {
+                    content += `\n-# ${result.anime_name} • [Search on AniList](<https://anilist.co/search/anime?search=${encodeURIComponent(result.anime_name)}>)`;
+                }
+
                 return {
                     type: InteractionResponseType.ChannelMessageWithSource,
                     data: {
-                        content: `:speech_balloon: ${message}`,
+                        content: content,
                         embeds: [
                             {
                                 color: randomColor(),
                                 image: {
-                                    url: nekos.results[0].url,
+                                    url: result.url,
                                 },
                             },
                         ],

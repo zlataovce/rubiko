@@ -5,7 +5,7 @@ import type {
     APIInteractionResponse,
 } from "discord-api-types/payloads/v10";
 // import ping from "./ping";
-import meta from "./action/meta";
+// import meta from "./action/meta";
 import pat from "./action/pat";
 import hug from "./action/hug";
 import kiss from "./action/kiss";
@@ -28,9 +28,12 @@ export interface Command extends Partial<APIApplicationCommand> {
 
 export const COMMANDS: Command[] = [
     // utility
+
     // ping,
+
     // actions
-    meta,
+
+    // meta,
     pat,
     hug,
     kiss,
