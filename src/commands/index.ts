@@ -16,6 +16,10 @@ import tickle from "./action/tickle";
 import blush from "./action/blush";
 import cuddle from "./action/cuddle";
 import pout from "./action/pout";
+import peek from "./action/peek";
+import punch from "./action/punch";
+import sleep from "./action/sleep";
+import yeet from "./action/yeet";
 
 export type CommandHandler = (
     interaction: APIApplicationCommandInteraction,
@@ -44,6 +48,10 @@ export const COMMANDS: Command[] = [
     blush,
     cuddle,
     pout,
+    peek,
+    punch,
+    sleep,
+    yeet,
 ];
 
 const commands = new Map(COMMANDS.map((cmd) => [cmd.name!.toLowerCase(), cmd]));
