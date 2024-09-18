@@ -17,7 +17,7 @@ import {
 const models: Record<string, BaseAiTextGenerationModels> = {
     "phi-2": "@cf/microsoft/phi-2",
     "gemma-7b": "@hf/google/gemma-7b-it",
-    "mistral-7b": "@hf/mistral/mistral-7b-instruct-v0.2",
+    "qwen-1-5-7b": "@cf/qwen/qwen1.5-7b-chat-awq",
     "llama-3-8b": "@cf/meta/llama-3-8b-instruct",
     "tinyllama-1-1b": "@cf/tinyllama/tinyllama-1.1b-chat-v1.0",
 };
