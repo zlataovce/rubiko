@@ -9,6 +9,9 @@ minify = true
 [vars]
 NEKOS_API_URL = "https://nekos.best/api/v2"
 
+[ai]
+binding = "AI"
+
 # Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
 # Docs: https://developers.cloudflare.com/workers/runtime-apis/kv
 # [[kv_namespaces]]

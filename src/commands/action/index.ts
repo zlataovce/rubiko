@@ -106,7 +106,11 @@ export const createAction = (action: Action): Command => {
         ],
         integration_types: [ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall],
         contexts: [InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel],
-        handler: async (interaction: APIApplicationCommandInteraction, env: Env): Promise<APIInteractionResponse> => {
+        async handle(
+            interaction: APIApplicationCommandInteraction,
+            env: Env,
+            _ctx: ExecutionContext
+        ): Promise<APIInteractionResponse> {
             let invoker = interaction.user;
             if (!invoker) {
                 invoker = interaction.member!.user;

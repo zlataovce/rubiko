@@ -14,7 +14,11 @@ const ping: Command = {
     description: "Sends a ping interaction.",
     integration_types: [ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall],
     contexts: [InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel],
-    handler: async (_interaction: APIApplicationCommandInteraction, _env: Env): Promise<APIInteractionResponse> => {
+    async handle(
+        _interaction: APIApplicationCommandInteraction,
+        _env: Env,
+        _ctx: ExecutionContext
+    ): Promise<APIInteractionResponse> {
         return {
             type: InteractionResponseType.ChannelMessageWithSource,
             data: {

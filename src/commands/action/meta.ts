@@ -16,7 +16,11 @@ const meta: Command = {
     name: "What's this?",
     integration_types: [ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall],
     contexts: [InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel],
-    handler: async (interaction: APIApplicationCommandInteraction, env: Env): Promise<APIInteractionResponse> => {
+    async handle(
+        interaction: APIApplicationCommandInteraction,
+        env: Env,
+        _ctx: ExecutionContext
+    ): Promise<APIInteractionResponse> {
         const message = Object.values((interaction as APIMessageInteraction).data.resolved.messages)[0];
         if (!message) {
             return error("Something is wrong with the interaction.");

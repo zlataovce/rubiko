@@ -5,6 +5,7 @@ import type {
     APIInteractionResponse,
 } from "discord-api-types/payloads/v10";
 // import ping from "./ping";
+import generate from "./generate";
 // import meta from "./action/meta";
 import pat from "./action/pat";
 import hug from "./action/hug";
@@ -21,19 +22,15 @@ import punch from "./action/punch";
 import sleep from "./action/sleep";
 import yeet from "./action/yeet";
 
-export type CommandHandler = (
-    interaction: APIApplicationCommandInteraction,
-    env: Env
-) => Promise<APIInteractionResponse>;
-
 export interface Command extends Partial<APIApplicationCommand> {
-    handler: CommandHandler;
+    handle(data: APIApplicationCommandInteraction, env: Env, ctx: ExecutionContext): Promise<APIInteractionResponse>;
 }
 
 export const COMMANDS: Command[] = [
     // utility
 
     // ping,
+    generate,
 
     // actions
 
@@ -55,11 +52,11 @@ export const COMMANDS: Command[] = [
 ];
 
 const commands = new Map(COMMANDS.map((cmd) => [cmd.name!.toLowerCase(), cmd]));
-export const findHandler = (name: string): CommandHandler | null => {
+export const find = (name: string): Command | null => {
     const cmd = commands.get(name.toLowerCase());
     if (!cmd) {
         return null;
     }
 
-    return cmd.handler;
+    return cmd;
 };
