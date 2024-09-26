@@ -1,3 +1,5 @@
+export const USER_AGENT = "rubiko/1.0.0 (github.com/zlataovce/rubiko)";
+
 export const enum Color {
     Default = 0x000000,
     White = 0xffffff,

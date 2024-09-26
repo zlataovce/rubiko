@@ -1,5 +1,6 @@
 import type { Command } from "@/commands";
 import type { Env } from "@/env";
+import { USER_AGENT } from "@/util";
 import {
     type APIApplicationCommandInteraction,
     type APIMessageApplicationCommandInteraction as APIMessageInteraction,
@@ -32,7 +33,7 @@ const meta: Command = {
         }
 
         try {
-            const name = (await fetch(url)).headers.get("anime_name");
+            const name = (await fetch(url, { headers: { "User-Agent": USER_AGENT } })).headers.get("anime_name");
             if (!name) {
                 return {
                     type: InteractionResponseType.ChannelMessageWithSource,

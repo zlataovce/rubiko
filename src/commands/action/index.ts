@@ -1,6 +1,6 @@
 import type { Env } from "@/env";
 import type { Command } from "@/commands";
-import { randomColor } from "@/util";
+import { randomColor, USER_AGENT } from "@/util";
 import {
     type APIApplicationCommandInteraction,
     type APIApplicationCommandInteractionDataUserOption as APICommandInteractionUserOption,
@@ -74,7 +74,7 @@ interface NekosResponse {
 const fetchNekos = async (baseUrl: string, category: NekosCategory, amount: number = 1): Promise<NekosResponse> => {
     const url = `${baseUrl}/${category}` + (amount > 1 ? `?amount=${amount}` : "");
 
-    return fetch(url).then((r) => r.json());
+    return fetch(url, { headers: { "User-Agent": USER_AGENT } }).then((r) => r.json());
 };
 
 export interface Action {
