@@ -12,8 +12,8 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0
       discord-api-types:
-        specifier: ^0.37.101
-        version: 0.37.101
+        specifier: ^0.37.102
+        version: 0.37.102
       itty-router:
         specifier: ^5.0.18
         version: 5.0.18
@@ -296,8 +296,8 @@ packages:
   defu@6.1.4:
     resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
 
-  discord-api-types@0.37.101:
-    resolution: {integrity: sha512-2wizd94t7G3A8U5Phr3AiuL4gSvhqistDwWnlk1VLTit8BI1jWUncFqFQNdPbHqS3661+Nx/iEyIwtVjPuBP3w==}
+  discord-api-types@0.37.102:
+    resolution: {integrity: sha512-5+m5twqG8n77rLhKuh2c/971UWszEL/c3KbdvVLUBTPXuS8PbYC/7W7NYhwP02qowjj6CHoKYZbD0ppOUCsT6g==}
 
   esbuild@0.17.19:
     resolution: {integrity: sha512-XQ0jAPFkK/u3LcVRcvVHQcTIqD6E2H1fvZMA5dQPSOWb3suUbWbfbRf94pjc0bNzRYLfIrDRQXr7X+LHIm5oHw==}
@@ -708,7 +708,7 @@ snapshots:
 
   defu@6.1.4: {}
 
-  discord-api-types@0.37.101: {}
+  discord-api-types@0.37.102: {}
 
   esbuild@0.17.19:
     optionalDependencies:
