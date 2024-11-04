@@ -11,10 +11,10 @@
         "format": "prettier . --write"
     },
     "devDependencies": {
-        "@cloudflare/workers-types": "^4.20240925.0",
+        "@cloudflare/workers-types": "^4.20241022.0",
         "prettier": "3.3.3",
-        "typescript": "^5.6.2",
-        "wrangler": "^3.78.12"
+        "typescript": "^5.6.3",
+        "wrangler": "^3.84.1"
     },
     "dependencies": {
         "@noble/ed25519": "^2.1.0",
