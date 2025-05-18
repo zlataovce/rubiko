@@ -1,8 +1,8 @@
 import type { Env } from "@/env";
 import type {
-    APIApplicationCommand,
-    APIApplicationCommandInteraction,
-    APIInteractionResponse,
+  APIApplicationCommand,
+  APIApplicationCommandInteraction,
+  APIInteractionResponse,
 } from "discord-api-types/payloads/v10";
 // import ping from "./ping";
 import generate from "./generate";
@@ -23,40 +23,40 @@ import sleep from "./action/sleep";
 import yeet from "./action/yeet";
 
 export interface Command extends Partial<APIApplicationCommand> {
-    handle(data: APIApplicationCommandInteraction, env: Env, ctx: ExecutionContext): Promise<APIInteractionResponse>;
+  handle(data: APIApplicationCommandInteraction, env: Env, ctx: ExecutionContext): Promise<APIInteractionResponse>;
 }
 
 export const COMMANDS: Command[] = [
-    // utility
+  // utility
 
-    // ping,
-    generate,
+  // ping,
+  generate,
 
-    // actions
+  // actions
 
-    // meta,
-    pat,
-    hug,
-    kiss,
-    poke,
-    slap,
-    bite,
-    tickle,
-    blush,
-    cuddle,
-    pout,
-    peek,
-    punch,
-    sleep,
-    yeet,
+  // meta,
+  pat,
+  hug,
+  kiss,
+  poke,
+  slap,
+  bite,
+  tickle,
+  blush,
+  cuddle,
+  pout,
+  peek,
+  punch,
+  sleep,
+  yeet,
 ];
 
 const commands = new Map(COMMANDS.map((cmd) => [cmd.name!.toLowerCase(), cmd]));
 export const find = (name: string): Command | null => {
-    const cmd = commands.get(name.toLowerCase());
-    if (!cmd) {
-        return null;
-    }
+  const cmd = commands.get(name.toLowerCase());
+  if (!cmd) {
+    return null;
+  }
 
-    return cmd;
+  return cmd;
 };
