@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@noble/ed25519": "^2.2.3",
-    "discord-api-types": "^0.38.8",
+    "discord-api-types": "^0.38.9",
     "itty-router": "^5.0.18"
   },
   "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
